@@ -115,6 +115,13 @@ public final class CompatibleAnimationView: UIView {
       animationView.loopMode = loopAnimationCount == -1 ? .loop : .repeat(Float(loopAnimationCount))
     }
   }
+  
+  @objc
+  public var loopAnimationWithReverse: CGFloat = 0 {
+    didSet {
+      animationView.loopMode = .autoReverse
+    }
+  }
 
   @objc
   public override var contentMode: UIView.ContentMode {
